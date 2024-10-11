@@ -1,0 +1,141 @@
+/* src/Todo.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .todo-container {
+    max-width: 400px; /* Centered container */
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .todo-container:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+  }
+  
+  h1 {
+    text-align: center;
+    color: #495057;
+    margin-bottom: 25px;
+  }
+  
+  input {
+    padding: 12px;
+    width: calc(100% - 130px);
+    margin-right: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus {
+    border-color: #0056b3;
+    outline: none;
+  }
+  
+  button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  li:hover {
+    background-color: #e2e6ea;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  li button {
+    background-color: #dc3545;
+  }
+  
+  li button:hover {
+    background-color: #c82333;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 5px; /* Space between buttons */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .todo-container {
+      padding: 15px;
+    }
+  
+    input {
+      width: calc(100% - 90px); /* Wider input for mobile */
+    }
+  
+    button {
+      width: 70px; /* Fixed width for buttons */
+    }
+  
+    li {
+      flex-direction: column; /* Stack buttons on smaller screens */
+      align-items: flex-start;
+    }
+  
+    .button-container {
+      width: 100%; /* Full width for button container */
+      justify-content: flex-start; /* Align buttons to the left */
+    }
+  }
+  
+  /* Larger screens */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .todo-container {
+      max-width: 500px; /* Slightly wider for tablets */
+    }
+  
+    input {
+      width: calc(100% - 140px); /* Adjust input width for larger screens */
+    }
+  }
+  
+  /* Desktop styles */
+  @media (min-width: 1025px) {
+    .todo-container {
+      max-width: 600px; /* Even wider for desktops */
+    }
+  
+    input {
+      width: calc(100% - 160px); /* Adjust input width */
+    }
+  }
+  
